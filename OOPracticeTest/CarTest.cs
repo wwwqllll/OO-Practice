@@ -7,10 +7,10 @@ namespace OOPracticeTest
     public class CarTest
     {
         [Fact]
-        public void Should_return_message_when_speed_up_given_car_name_cool_car()
+        public void Should_return_message_when_speed_up_given_car_name_cool_car_and_engine_gasoline()
         {
             //given
-            Car car = new Car("Cool Car", 30);
+            Car car = new Car("Cool Car", new Engine("gasoline"));
 
             //when
             string message = car.SpeedUp();
@@ -36,7 +36,7 @@ namespace OOPracticeTest
         public void Should_return_message_when_driver_speed_up_given_a_car()
         {
             //given
-            Car car = new Car("Cool Car", 30);
+            Car car = new Car("Cool Car", new Engine("gasoline"));
             Driver driver = new Driver(car);
 
             //when
